@@ -3,7 +3,7 @@
 
 Student360 is a full-stack, AI-powered system designed to automatically detect and rate student behaviors in classrooms/exam halls and generate attendance using face-recognition-based identification.
 
-This system uses:
+This system uses
 
 * YOLOv8 Behavior Detection (sleeping, yawning, phone use, turning around, raising hand, note-taking)
 
