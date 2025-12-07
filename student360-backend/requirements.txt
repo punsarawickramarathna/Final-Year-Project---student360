@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pydantic
+pymongo
+python-jose[cryptography]   # for JWT (optional)
+python-dotenv               # store secrets in .env
+pandas                      # for CSV exports (optional)
+bcrypt
+pytest
