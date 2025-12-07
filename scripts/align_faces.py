@@ -1,4 +1,4 @@
-# scripts/align_faces.py
+
 import os
 import argparse
 from facenet_pytorch import MTCNN

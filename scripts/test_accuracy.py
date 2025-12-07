@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 import os, json, argparse
 import torch, numpy as np
 from torchvision import transforms, models

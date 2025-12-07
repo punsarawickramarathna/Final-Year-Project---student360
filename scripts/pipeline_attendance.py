@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 import glob, subprocess, sys, collections, argparse, os
 p = argparse.ArgumentParser()
 p.add_argument("--model", default="models/best_model.pth")

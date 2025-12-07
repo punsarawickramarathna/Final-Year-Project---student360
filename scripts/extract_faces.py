@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 import os, cv2, argparse
 
 def save_crop(img, box, out_path, size=(160,160)):

@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 import argparse, json, cv2, torch
 from torchvision import transforms, models
 from PIL import Image
@@ -24,7 +24,7 @@ def preprocess(path):
     img = cv2.imread(path)
     if img is None:
         raise ValueError("Could not load image")
-    # optional: histogram equalization on Y channel
+    
     img_yuv = cv2.cvtColor(img, cv2.COLOR_BGR2YUV)
     img_yuv[:,:,0] = cv2.equalizeHist(img_yuv[:,:,0])
     img_eq = cv2.cvtColor(img_yuv, cv2.COLOR_YUV2BGR)

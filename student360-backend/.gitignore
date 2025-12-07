@@ -1,9 +1,49 @@
+# ------------------------------
+# Python + FastAPI + ML Project
+# ------------------------------
+
+# Virtual environment
 venv/
+env/
+
+# Python cache
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
+
+# Model files
 *.pth
+*.pt
 *.pkl
+models/
 models/*.pth
-.env
-.DS_Store
+
+# Jupyter & IDE junk
 .ipynb_checkpoints/
+.DS_Store
+
+# Environment variables
+.env
+*.env
+
+# Temporary data & outputs
+*.zip
+*.rar
+*.mp4
+*.avi
+*.log
+
+# Dataset folders (large, not for GitHub)
+dataset/
+real_test/
+real_aligned/
+
+# OS, editor, misc
+Thumbs.db
+.vscode/
+.idea/
+
+# Other auto-generated
+*.sqlite
+*.db

@@ -1,11 +1,3 @@
-#!/usr/bin/env python3
-"""
-Split dataset into train/val with CLI.
-
-Usage:
-python scripts/split_dataset.py --src dataset/aligned --dst dataset --train_ratio 0.8
-"""
-
 import os, shutil, random
 import argparse
 
@@ -59,11 +51,6 @@ def split_dataset(src, dst, train_ratio=0.8):
         print(f"✔ {cls}: train {len(train_imgs)}, val {len(val_imgs)}")
 
     print("\n Dataset split complete!")
-
-
-# ───────────────────────────────────────────────────────────────
-# Main
-# ───────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Split dataset into train/val sets.")
