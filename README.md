@@ -1,5 +1,5 @@
 ---
-#### 🎓 **Student360 – Intelligent University Student Behavior & Attendance Monitoring System**
+# 🎓 **Student360 – Intelligent University Student Behavior & Attendance Monitoring System**
 
 Student360 is a full-stack, AI-powered system designed to automatically detect and rate student behaviors in classrooms/exam halls and generate attendance using face-recognition-based identification.
 
