@@ -1,37 +1,21 @@
-🎓 Student360 – Intelligent University Student Behavior & Attendance Monitoring System
+---
+### **🎓 Student360 – Intelligent University Student Behavior & Attendance Monitoring System**
 
 Student360 is a full-stack, AI-powered system designed to automatically detect and rate student behaviors in classrooms/exam halls and generate attendance using face-recognition-based identification.
 
 This system uses:
 
-YOLOv8 Behavior Detection (sleeping, yawning, phone use, turning around, raising hand, note-taking)
+* YOLOv8 Behavior Detection (sleeping, yawning, phone use, turning around, raising hand, note-taking)
 
-Custom CNN Face Recognition Model (trained using PyTorch from student photo dataset)
+* Custom CNN Face Recognition Model (trained using PyTorch from student photo dataset)
 
-FastAPI Backend (secure JWT auth + behavior logging + rating engine + attendance generation)
+* FastAPI Backend (secure JWT auth + behavior logging + rating engine + attendance generation)
 
-MongoDB Database (Atlas cloud)
+* MongoDB Database (Atlas cloud)
 
-Dashboard Frontend (React / Web App)
-
-📌 Project Features
-✅ Behavior Detection
-
-Detects and logs:
-
-Sleeping on desk
-
-Yawning
-
-Using mobile phone
-
-Turning around (exam cheating)
-
-Raising hand
-
-Actively taking notes
-
-Behavior logs are stored via FastAPI.
+* Dashboard Frontend (React / Web App)
+  
+---
 # 📌 **Project Features**
 
 ### ✅ **Behavior Detection**
