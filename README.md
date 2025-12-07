@@ -12,8 +12,6 @@ This system uses:
 * **MongoDB Database** (Atlas cloud)
 * **Dashboard Frontend** (React / Web App)
 
----
-
 # 📌 **Project Features**
 
 ### ✅ **Behavior Detection**
