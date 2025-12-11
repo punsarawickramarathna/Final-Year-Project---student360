@@ -1,4 +1,3 @@
-# main.py
 from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
 from fastapi import FastAPI, HTTPException, Depends, Header
 from pydantic import BaseModel
@@ -38,7 +37,7 @@ def get_current_user(credentials: HTTPAuthorizationCredentials = Depends(securit
     return payload
 
 
-# --- Auth (POC)
+# Auth
 @app.post("/auth/register")
 def register(user: UserIn):
     existing = users.find_one({"username": user.username})
@@ -66,7 +65,7 @@ def login(user: UserIn):
     return {"access_token": token, "token_type": "bearer"}
 
 
-# --- Core endpoints
+# Core endpoints
 @app.post("/behavior-logs", summary="Upload a batch of behavior logs")
 def upload_behavior_logs(logs: List[BehaviorLogIn], current_user=Depends(get_current_user)):
     inserted = []
@@ -141,7 +140,7 @@ def get_class_summary(class_id: str, current_user=Depends(get_current_user)):
     # Also compute total events and top offenders optionally
     total_events = sum(r["count"] for r in results) if results else 0
 
-    # Optional: top students with most negative behaviors (example)
+    # top students with most negative behaviors
     negative_behaviors = ["sleeping", "using_phone", "turning_around", "yawning"]
     pipeline_top_bad = [
         {"$match": {"student_id": {"$regex": f"^{class_id}"}, "behavior": {"$in": negative_behaviors}}},
@@ -186,7 +185,7 @@ def export_student_logs_csv(student_id: str, current_user=Depends(get_current_us
     filename = f"logs_{student_id}.csv"
     return StreamingResponse(generator, media_type="text/csv", headers={"Content-Disposition": f"attachment; filename={filename}"})
 
-# Example: export class logs (optionally use date filter parameters)
+# export class logs
 @app.get("/export/class/{class_id}/logs.csv", summary="Export class logs as CSV")
 def export_class_logs_csv(class_id: str, current_user=Depends(get_current_user)):
     cursor = behavior_logs.find({"student_id": {"$regex": f"^{class_id}"}}).sort("timestamp", -1)
