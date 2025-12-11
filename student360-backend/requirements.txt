@@ -2,8 +2,8 @@ fastapi
 uvicorn[standard]
 pydantic
 pymongo
-python-jose[cryptography]   # for JWT (optional)
+python-jose[cryptography]   # for JWT 
 python-dotenv               # store secrets in .env
-pandas                      # for CSV exports (optional)
+pandas                      # for CSV exports 
 bcrypt
 pytest
